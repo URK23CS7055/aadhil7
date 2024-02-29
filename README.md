@@ -8,3 +8,4 @@ with open("hi.txt", 'r') as file:
             f.write(" ")
 with open("rev_hi.txt", 'r') as f:
     print(f.read())
+    
