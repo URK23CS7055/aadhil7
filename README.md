@@ -1,29 +1,10 @@
-from tkinter import*
-from tkinter import messagebox
-NIA=Tk()
-NIA.title("JAIL REG")
-NIA.geometry("500x400")
-a=Label(NIA, text = "HARI", font = ('airal',15), bd = 17)
-a.pack()
-form= Frame(NIA)
-form.pack(side = TOP , fill= X)
-nameL= Label(form, text = "ACCUSED NO", font = ('airal',15), bd = 17)
-passL= Label(form, text = "CELL NO", font = ('airal',15), bd = 17)
-cellL= Label(form, text =  "TYPE OF CASE", font = ('airal',15), bd = 17)  
-nameL.grid(row = 1, sticky=W)
-passL.grid(row = 2, sticky=W)
-cellL.grid(row = 3, sticky=W)
-#vicL.grid(row = 4, sticky=W)
-nameE=Entry(form)
-passE=Entry(form)
-cellE=Entry(form)
-#vicE=Entry(form)
-nameE.grid(row = 1,column = 2)
-passE.grid(row = 2,column = 2)
-cellE.grid(row = 3,column = 2)
-#vicE.grid(row = 4,column = 2)
-Login=Button(NIA,text="ULLA PO")
-Login.pack()
-
-
-NIA.mainloop()
+with open("hi.txt", 'r') as file:
+    content = file.read()
+    words = content.split()
+    rev = words[::-1]
+    with open("rev_hi.txt", 'w') as f:
+        for i in rev:
+            f.write(i)
+            f.write(" ")
+with open("rev_hi.txt", 'r') as f:
+    print(f.read())
